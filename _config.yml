@@ -1,6 +1,6 @@
 # Site Info
-title: jin`s blog
-tagline: 'study for data science'
+title: Jin`s blog
+tagline: 'Study for Data Science'
 description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://codinfox.github.io" target="_blank">@codinfox</a>.'
 baseurl: ""
 url: https://jin717.github.io
@@ -24,7 +24,7 @@ version: 1.0.0
 
 # About/contact
 author:
-  name: jin
+  name: Jin
   description: <strong>데이터가 삶에 의미 있기를</strong>
   gravatar:  # md5 hash of your email address
   contact:
@@ -41,12 +41,15 @@ nav:
     - '/blog/'
   Categories:           
     - '/'
-    - { others: '/blog/categories/#others' }
+    - { machine_learning: '/blog/categories/#machine_learning'}
+    - { deep_learning: '/blog/categories/#deep_learning'}
+    - { statistics: '/blog/categories/#statistics'}
     - { papers: '/blog/categories/#papers' }
-    - { git: '/blog/categories/#git' }
-    - { data_structure: '/blog/categories/#data_structure' }
+    - { data_engineering: '/blog/categories/#data_engineering' }
     - { algorithm: '/blog/categories/#algorithm' }
+    - { devops: '/blog/categories/#devops'}
     - { Categories: '/blog/categories/' }
+    - { others: '/blog/categories/#others' }
 
     - { Tags: '/blog/tags/' }
   About:          
