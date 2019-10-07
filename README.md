@@ -1,23 +1,4 @@
-# Codinfox-Lanyon
-
-This is a jekyll template based on [Lanyon](https://github.com/poole/lanyon). See a live demo [here](http://codinfox.github.io).
-
-**If you like this project, PLEASE give it a star.**
-
-Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content first by tucking away navigation in a hidden drawer. It's based on [Poole](http://getpoole.com), the Jekyll butler.
-
-All the configurations are inside either `_config.yml` or `_config.scss`. The options are fairly straightforward. 
-
-The theme supports: 
-
-1. Theme colors: you can choose your favorite theme color
-2. Changable sidebar locations
-3. Integration of FontAwesome, MathJax, Disqus and Google Analytics
-4. and numerous improvements over original Lanyon
+# study for data science
 
 
-## License
-
-Open sourced under the [MIT license](LICENSE.md).
-
-<3
+:smile: 데이터 사이언스에 필요한 다양한 지식에 대해 개인적으로 공부한 내용을 모아놓은 블로그입니다.
