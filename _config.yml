@@ -1,8 +1,8 @@
 # Site Info
 title: jin`s blog
-tagline: 'data science'
+tagline: 'study for data science'
 description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://codinfox.github.io" target="_blank">@codinfox</a>.'
-baseurl: "/DS"
+baseurl: ""
 url: https://jin717.github.io
 logo: '/public/logo.png'
 
@@ -25,39 +25,45 @@ version: 1.0.0
 # About/contact
 author:
   name: jin
-  description: A passionate <strong>developer and researcher</strong>, learning to be a giant.
-  gravatar: 3c2986ad7ac1f2230ea3596f44563328 # md5 hash of your email address
+  description: <strong>데이터가 삶에 의미 있기를</strong>
+  gravatar:  # md5 hash of your email address
   contact:
     # linkedin:  https://www.linkedin.com/in/lizhihao
     github:    https://github.com/jin717
     # facebook:  <hide>
     # twitter:   https://twitter.com/Li_Zhihao
     # weibo:     http://weibo.com/41173780
-    email:     http://www.google.com/recaptcha/mailhide/d?k=01I3lZFiZYng9N3QxYEtsDaQ==&c=31wAnZkuKqcG0ATAqJN8Z3ln5kkYLA9TwkGc-IbygpM=
+    email:     wlsgur717@naver.com
 
-# Navigation (2nd level links supported)
+    # Navigation (2nd level links supported)
 nav:
   Home:           
-    - '/'
-  Blog:           
     - '/blog/'
+  Categories:           
+    - '/'
+    - { others: '/blog/categories/#others' }
+    - { papers: '/blog/categories/#papers' }
+    - { git: '/blog/categories/#git' }
+    - { data_structure: '/blog/categories/#data_structure' }
+    - { algorithm: '/blog/categories/#algorithm' }
     - { Categories: '/blog/categories/' }
+
     - { Tags: '/blog/tags/' }
   About:          
     - '/about/'
   Github Project: 
-    - 'http://codinfox.github.io/'
+    - 'https://github.com/jin717?tab=repositories'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
-hero:
-  image: /public/img/we_will_be_giants_by_yalestewart.jpg
-  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+
 
 # Puglins
 mathjax: true # whether support mathjax
-google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
-disqus_short_name: 'your_short_name' # leave blank if you don't want disqus
+google_analytics_token: '' # leave blank if you don't want google analytics
+disqus_short_name: 'jin-blog' # leave blank if you don't want disqus
 
+plugins: 
+  [jekyll-paginate]
