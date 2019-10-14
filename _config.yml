@@ -4,7 +4,7 @@ tagline: 'Study for Data Science'
 description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://codinfox.github.io" target="_blank">@codinfox</a>.'
 baseurl: ""
 url: https://jin717.github.io
-logo: '/public/logo.png'
+logo: '/public/jin_logo.jpg'
 
 # Site configurations
 gems:
@@ -26,7 +26,7 @@ version: 1.0.0
 author:
   name: Jin
   description: <strong>데이터가 삶에 의미 있기를</strong>
-  gravatar:  # md5 hash of your email address
+#  gravatar:  # md5 hash of your email address
   contact:
     # linkedin:  https://www.linkedin.com/in/lizhihao
     github:    https://github.com/jin717
@@ -35,7 +35,7 @@ author:
     # weibo:     http://weibo.com/41173780
     email:     wlsgur717@naver.com
 
-    # Navigation (2nd level links supported)
+# Navigation (2nd level links supported)
 nav:
   Home:           
     - '/blog/'
@@ -60,7 +60,6 @@ nav:
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
-
 
 
 # Puglins
