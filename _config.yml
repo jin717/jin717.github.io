@@ -1,7 +1,7 @@
 # Site Info
 title: Jin`s blog
 tagline: 'Study for Data Science'
-description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://codinfox.github.io" target="_blank">@codinfox</a>.'
+description: 'serviced jekyll, based theme codinfox "http://codinfox.github.io" '
 baseurl: ""
 url: https://jin717.github.io
 logo: '/public/jin_logo.jpg'
