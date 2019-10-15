@@ -40,7 +40,7 @@ nav:
   Home:           
     - '/blog/'
   Categories:           
-    - '/'
+    - '/blog/categories/'
     - { Machine learning: '/blog/categories/#machine_learning'}
     - { Deep learning: '/blog/categories/#deep_learning'}
     - { Statistics: '/blog/categories/#statistics'}
@@ -48,7 +48,7 @@ nav:
     - { Data engineering: '/blog/categories/#data_engineering' }
     - { Algorithm: '/blog/categories/#algorithm' }
     - { Devops: '/blog/categories/#devops'}
-    - { Categories: '/blog/categories/' }
+#    - { Categories: '/blog/categories/' }
     - { Others: '/blog/categories/#others' }
 
     - { Tags: '/blog/tags/' }
