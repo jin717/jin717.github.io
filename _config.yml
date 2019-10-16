@@ -45,11 +45,13 @@ nav:
     - { Deep learning: '/blog/categories/#deep_learning'}
     - { Statistics: '/blog/categories/#statistics'}
     - { Papers: '/blog/categories/#papers' }
+    - { Python: '/blog/categories/#python' }
     - { Data engineering: '/blog/categories/#data_engineering' }
     - { Algorithm: '/blog/categories/#algorithm' }
     - { Devops: '/blog/categories/#devops'}
 #    - { Categories: '/blog/categories/' }
     - { Others: '/blog/categories/#others' }
+
 
     - { Tags: '/blog/tags/' }
   About:          
