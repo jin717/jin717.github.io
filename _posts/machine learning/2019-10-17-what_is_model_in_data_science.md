@@ -2,7 +2,7 @@
 layout: post
 title: 머신러닝 모델이란 무엇인가?
 category: machine_learning
-tags: [model]
+tags: [model, 모델, 모델링]
 comments: true
 ---
 
