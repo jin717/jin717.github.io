@@ -42,7 +42,7 @@ nav:
   Categories:           
     - '/blog/categories/'
     - { Machine learning: '/blog/categories/#machine_learning'}
-    - { Deep learning: '/blog/categories/#deep_learning'}
+#    - { Deep learning: '/blog/categories/#deep_learning'}
     - { Statistics: '/blog/categories/#statistics'}
     - { Papers: '/blog/categories/#papers' }
     - { Python: '/blog/categories/#python' }
