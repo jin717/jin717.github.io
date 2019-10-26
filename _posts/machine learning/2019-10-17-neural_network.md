@@ -2,7 +2,7 @@
 layout: post
 title: 인공신경망(1)
 category: machine_learning
-tags: [neural network]
+tags: [neural network, 인공신경망, 퍼셉트론]
 comments: true
 ---
 
