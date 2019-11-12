@@ -24,7 +24,7 @@ comments: true
 <center><img src="/public/machine_learning/perceptron.png"></center>
 
 - ANN의 가장 기본 구조 중 하나로 입력에 각각 가중치를 곱하고 합치고 계단함수(활성함수)를 적용하여 그 결과(y)를 출력합니다.
-- $$ \quad y\quad =\quad \left\{ \begin{matrix} 0,\quad ({ w }_{ 1 }{ x }_{ 1 }\quad +\quad { w }_{ 2 }{ x }_{ 2 })\quad <\quad \theta  \\ 1,\quad ({ w }_{ 1 }{ x }_{ 1 }\quad +\quad { w }_{ 2 }{ x }_{ 2 })\quad \ge \quad \theta  \end{matrix} \right  (단, \theta 는 계단함수의 임계치 )$$
+- $$ \quad y\quad =\quad \left\{ \begin{matrix} 0,\quad ({ w }_{ 1 }{ x }_{ 1 }\quad +\quad { w }_{ 2 }{ x }_{ 2 })\quad <\quad \theta  \\ 1,\quad ({ w }_{ 1 }{ x }_{ 1 }\quad +\quad { w }_{ 2 }{ x }_{ 2 })\quad \ge \quad \theta  \end{matrix} \right  (단, \theta 는 계단함수의 임계치) $$
 
 ## 퍼셈트론으로 논리회로 학습
 - AND 게이트의 진리표

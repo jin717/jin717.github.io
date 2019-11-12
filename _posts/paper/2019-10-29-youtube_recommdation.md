@@ -2,7 +2,7 @@
 layout: post
 title: Youtube 추천 시스템 리뷰
 category: paper
-tags: 추천_시스템, recommendation, youtube
+tags: 추천_시스템 recommendation youtube
 comments: true
 ---
 # 1. 소개
@@ -77,8 +77,7 @@ comments: true
 - 연속형, 범주형 변수를 임베딩하여 활용.(matrix factorization의 일반화)
 - 지리 정보, 성별을 활용
 - 영상의 나이 고려
-
-    - <img src="/public/paper/youtube_recommendation/importance_example_age.png">
+    <center><img src="/public/paper/youtube_recommendation/importance_example_age.png"></center>
     - freshness를 반영하기 위함.
     - 영상의 나이를 고려해주면(빨강) 사용자의 실제 컨텐츠 소비 패턴(초록)과 유사 해진다.
     - 학습 단계에서는 값을 넣어주고 실제 서비스 단계에서는 모두 0으로 처리 했다.(비디오 인기도 분포가 불안정한기 때문에)

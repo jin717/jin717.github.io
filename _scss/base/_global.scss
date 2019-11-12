@@ -3,9 +3,16 @@
   color: $white;
 }
 
+
 @font-face {
-  font-family: NanumSquareWeb;
-  src: url(NanumSquareR.woff) format('woff');
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot);
+  src: url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff2) format('woff2'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.woff) format('woff'),
+       url(//themes.googleusercontent.com/static/fonts/earlyaccess/nanumgothic/v3/NanumGothic-Regular.ttf) format('truetype');
 }
 
 html,
@@ -31,7 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 p, ul, li {
-  font-family: NanumSquareWeb, Sans-Serif;
+  font-family: 'Nanum Gothic', Sans-Serif;
 }
 
 code {
