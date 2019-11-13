@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 인공신경망(2)
+title: Deep Neural Network(2)
 category: machine_learning
-tags: [neural network, loss function, gradient decent]
+tags: [DNN, loss function, gradient decent, back propagation]
 comments: true
 ---
 
@@ -84,3 +84,9 @@ comments: true
 우리 딥러닝 학습의 여정은 순탄치 않았는데...
 
 \[다음 편 예고\] gradient가 자꾸 지멋대로 집을 나가거나 열폭해요
+
+## 참고 자료 
+
+- http://it.plusblog.co.kr/221243889886 
+- https://mattmazur.com/2015/03/17/a-step-by-step-backpropagation-example/
+- https://medium.com/@14prakash/back-propagation-is-very-simple-who-made-it-complicated-97b794c97e5c

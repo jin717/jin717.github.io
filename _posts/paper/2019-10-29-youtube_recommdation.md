@@ -164,7 +164,7 @@ comments: true
 - 시청 시간을 예측 하기 위해 weighted logistic regression을 적용
     - weighted logistic regression - 감상한 영상을 감상 시간으로 가중치 적용
     - 가중치 공산은 부정적 인상 대비 총 시청 시간을 기준으로 함
-    - 긍정적인 인상이 적다고 가정하면, 학습된 확률은 대략 E[T](1+P)
+    - 긍정적인 인상이 적다고 가정하면, 학습된 확률은 대략 $$ E[T](1+P) $$
         - $$ P $$ : 클릭률
         - $$ E[T] $$ : 예상되는 시청 시간
 
