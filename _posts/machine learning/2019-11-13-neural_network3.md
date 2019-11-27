@@ -8,7 +8,7 @@ comments: true
 
 ## DNN의 문제점
 
-지금의 DNN은 상당히 좋은 성능을 보이지만 초기에는 몇몇 문제점이 있었다.<br>
+최근의 DNN은 상당히 좋은 성능을 보이지만 초창기에는 몇몇 문제점이 있었다.<br>
 DNN 구조를 구성할 때 layer를 많이 쌓으면서 다음과 같다.
 
 - Vanishing gradient
@@ -139,7 +139,7 @@ DNN 구조를 구성할 때 layer를 많이 쌓으면서 다음과 같다.
         1. $$ m \leftarrow \beta m + \eta { \nabla  }_{ \theta  }J(\theta - \beta m) $$
         2. $$ \theta \leftarrow \theta - m $$
     - 기본 모멘텀 최적화 보다 거의 항상 빠름.
-    <center><img src="/public/machine_learning/compare_optimizer.png" height="400"></center>
+    <center><img src="/public/machine_learning/compare_optimizer.png" height="300"></center>
 
 - AdaGard(Adaptive Subgradient Methods for Online Learning and Stochastic Optimization)
     - 가장 가파른 차원을 따라 그레디언트 벡터의 스케일을 감소시켜 문제를 해결한다.
@@ -152,7 +152,7 @@ DNN 구조를 구성할 때 layer를 많이 쌓으면서 다음과 같다.
         - 각 매개변수 $$ { \theta }_{ i } $$에 대해 $$ { \theta  }_{ i }\leftarrow { \theta  }_{ i }-\eta \frac { \partial  }{ \partial { \theta  }_{ i } } J(\theta )\div \sqrt { { s }_{ i }+\varepsilon } $$를 계산한 것과 동일하다.
     - 그레디언트가 클수록 $$ { s }_{ i } $$도 커지고, $$ \sqrt { s+\varepsilon  } $$는 작아져서, 가파른 차원에서 학습이 느려 지고 완만한 차원에서 빨리 진행 된다.
     - 학습률이 빠르게 감소하여 전역 최적점에 도달하기 전에 멈출 수 있으므로 DNN에서는 권장하지 않는다. (선형회귀 같은 간단한 작업에는 효과적일 수 있다.)
-    <center><img src="/public/machine_learning/AdaGrad.png" height="400"></center>
+    <center><img src="/public/machine_learning/AdaGrad.png" height="300"></center>
     
 - RMSProp
     - AdaGrad가 너무 빠르게 느려 져서 최적점에 도달하기전에 멈추는 문제를 해결하였다.
@@ -184,7 +184,7 @@ DNN 구조를 구성할 때 layer를 많이 쌓으면서 다음과 같다.
 - 학습률이 너무 크면 발산할 수 있으며, 너무 작게 잡으면 최적화 되는데 시간이 매우 오래 걸린다.
 - 리소스가 한정적이라면 차선책으로 완전히 수렴하기 전에 멈추는 방법도 있다.
 - 더 좋은 방법은 학습 중간에 학습률을 변경하는 것이다.
-<center><img src="/public/machine_learning/learning_curves_by_learning_rate.png" height="300"></center>
+<center><img src="/public/machine_learning/learning_curves_by_learning_rate.png" height="200"></center>
 
 - 학습률 스케줄링
     - 미리 정의된 고정 학습률
@@ -203,10 +203,49 @@ DNN 구조를 구성할 때 layer를 많이 쌓으면서 다음과 같다.
 
 ## Overfitting 방지
 
+- 아래와 같이 DNN에서 모델을 regularization하여 overfitting을 방지하는 방법을 살펴보자.
+    - 조기 종료(early stopping)
+    - 드룹아웃(dropout)
+    - $$ { l }_{ 1 } $$과 $$ { l }_{ 2 } $$ regularization
+    - max-norm regularization
+
 ### early stopping
+
+- 학습 과정 중 검증 데이터의 성능이 떨어지기 시작할 때 훈련을 중단하는 것을 의미한다.
+- 매 배치마다 최고 성능의 모델을 스냅샷으로 저장하고, 일정 step 이상 모델이 변화가 없으면 학습을 중단하고 해당 스냅샷을 적용한다.
+- 다른 머신러닝 알고리즘에서도 적용 가능하다.
+<center><img src="/public/machine_learning/early_stopping.png" height="300"></center>
+
 ### dropout
+
+- 2012년, 제프리 힌튼에 의해 제안되었다.
+- 매 훈련 스텝에서 각 뉴런이 확률 p에 의해 드롭아웃 된다.
+- 하이퍼 파라미터 p를 dropout rate이라고 한다. (일반적으로 0.5로 초기화)
+- 이렇게 학습하게 되면, 매 step마다 다른 신경망 구조를 가지게 되어 일반화 된다.
+- 매번 각각 다른 신경망을 평균으로 하는 앙상블로 이해할 수 있다.
+- 테스트하는 과정에서 한 뉴런이 평균적으로 두 배 많은 입력 뉴런과 연결되므로 훈련이 끝난 뒤에는 가중치에 보존확률(1-p)를 곱해야 한다.
+- 모델이 과대적합 되었으면 p를 키워야 한다.
+- 모델이 과소적합 되었으면 p를 낮춰야 한다.
+<center><img src="/public/machine_learning/dropout.png" height="200"></center>
+
 ### $$ { l }_{ 1 } $$과 $$ { l }_{ 2 } $$ regularization
+
+- 손실 함수($$ L $$)에 적절한 규제항을 추가하여 일반화 할 수 있다.
+- $$ W = \left[ { w }_{ 1 } { w }_{ 2 } ... { w }_{ n } \right] $$라고 할때,
+- $$ { l }_{ 1 } $$ regularization    
+    - $$ { L }_{ new } := { L }_{ old } + \frac { \lambda  }{ 2 } ({ w }_{ 1 }^{ 2 } + { w }_{ 2 }^{ 2 } + { w }_{ n }^{ 2 }) $$
+- $$ { l }_{ 2 } $$ regularization
+    - $$ { L }_{ new } := { L }_{ old } + \lambda (\left| { w }_{ 1 } \right| + \left| { w }_{ 2 } \right| + ... + \left| { w }_{ n } \right| ) $$
+- $$ { l }_{ 1 } + { l }_{ 2 } $$ regularization
+    - $$ { L }_{ new } := { L }_{ old } + \frac { \lambda  }{ 2 } ({ w }_{ 1 }^{ 2 } + { w }_{ 2 }^{ 2 } + { w }_{ n }^{ 2 }) + \lambda (\left| { w }_{ 1 } \right| + \left| { w }_{ 2 } \right| + ... + \left| { w }_{ n } \right| ) $$
+
 ### max-norm regularization
+
+- 가중치 $$ W $$의 크기({ l }_{ 1 } norm)를 특정 임계치보다 작게 제한하는 방법이다.
+- 알고리즘
+    - 매 훈련 step에서 { \left\| w \right\|  }_{ 2 }를 계산한다.
+    - $$ W\leftarrow W\frac { r }{ { \left\| w \right\|  }_{ 2 } } $$으로 가중치를 제한한다.
+
 
 
 ## 참고 자료
