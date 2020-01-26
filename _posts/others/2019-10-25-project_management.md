@@ -2,7 +2,7 @@
 layout: post
 title: 데이터 분석 프로젝트 관리 방법론
 category: others
-tags: 프로젝트 관리 방법론, 일정 관리, 프로젝트 기획
+tags: 프로젝트_관리_방법론, 일정_관리, 프로젝트_기획
 comments: true
 ---
 
