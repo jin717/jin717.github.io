@@ -25,14 +25,10 @@ version: 1.0.0
 # About/contact
 author:
   name: Jin
-  description: <strong>데이터가 삶에 의미 있기를</strong>
-#  gravatar:  # md5 hash of your email address
+  description: <strong>데이터 사이언스 관련 개인 학습 블로그입니다.</strong>
   contact:
     # linkedin:  https://www.linkedin.com/in/lizhihao
     github:    https://github.com/jin717
-    # facebook:  <hide>
-    # twitter:   https://twitter.com/Li_Zhihao
-    # weibo:     http://weibo.com/41173780
     email:     wlsgur717@naver.com
 
 # Navigation (2nd level links supported)
@@ -42,17 +38,12 @@ nav:
   Categories:           
     - '/blog/categories/'
     - { Machine learning: '/blog/categories/#machine_learning'}
-#    - { Deep learning: '/blog/categories/#deep_learning'}
     - { Statistics: '/blog/categories/#statistics'}
     - { Papers: '/blog/categories/#papers' }
     - { Python: '/blog/categories/#python' }
     - { Data engineering: '/blog/categories/#data_engineering' }
-    - { Algorithm: '/blog/categories/#algorithm' }
-    - { Devops: '/blog/categories/#devops'}
-#    - { Categories: '/blog/categories/' }
+#    - { Algorithm: '/blog/categories/#algorithm' }
     - { Others: '/blog/categories/#others' }
-
-
     - { Tags: '/blog/tags/' }
   About:          
     - '/about/'

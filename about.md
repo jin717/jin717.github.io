@@ -22,8 +22,3 @@ title: About
     - meta learning
 - Spark / ElasticSearch / Hadoop / airflow
 - Docker / K8S(Kubernetes)
-- 데이터 분석 방법론
-    - KDD
-    - SEMMA
-    - CRISP-DM
-    - 애자일 데이터 사이언스
