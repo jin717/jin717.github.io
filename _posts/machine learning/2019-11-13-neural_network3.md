@@ -233,27 +233,24 @@ DNN 구조를 구성할 때 layer를 많이 쌓으면서 다음과 같다.
 - 손실 함수($$ L $$)에 적절한 규제항을 추가하여 일반화 할 수 있다.
 - $$ W = \left[ { w }_{ 1 } { w }_{ 2 } ... { w }_{ n } \right] $$라고 할때,
 - $$ { l }_{ 1 } $$ regularization    
-    - $$ { L }_{ new } := { L }_{ old } + \frac { \lambda  }{ 2 } ({ w }_{ 1 }^{ 2 } + { w }_{ 2 }^{ 2 } + { w }_{ n }^{ 2 }) $$
+
+$$ { L }_{ new } := { L }_{ old } + \frac { \lambda  }{ 2 } ({ w }_{ 1 }^{ 2 } + { w }_{ 2 }^{ 2 } + { w }_{ n }^{ 2 }) $$
+
 - $$ { l }_{ 2 } $$ regularization
-    - $$ { L }_{ new } := { L }_{ old } + \lambda (\left| { w }_{ 1 } \right| + \left| { w }_{ 2 } \right| + ... + \left| { w }_{ n } \right| ) $$
+
+$$ { L }_{ new } := { L }_{ old } + \lambda (\left| { w }_{ 1 } \right| + \left| { w }_{ 2 } \right| + ... + \left| { w }_{ n } \right| ) $$
+
 - $$ { l }_{ 1 } + { l }_{ 2 } $$ regularization
-    - $$ { L }_{ new } := { L }_{ old } + \frac { \lambda  }{ 2 } ({ w }_{ 1 }^{ 2 } + { w }_{ 2 }^{ 2 } + { w }_{ n }^{ 2 }) + \lambda (\left| { w }_{ 1 } \right| + \left| { w }_{ 2 } \right| + ... + \left| { w }_{ n } \right| ) $$
+    
+$$ { L }_{ new } := { L }_{ old } + \frac { \lambda  }{ 2 } ({ w }_{ 1 }^{ 2 } + { w }_{ 2 }^{ 2 } + { w }_{ n }^{ 2 }) + \lambda (\left| { w }_{ 1 } \right| + \left| { w }_{ 2 } \right| + ... + \left| { w }_{ n } \right| ) $$
 
 ### max-norm regularization
 
-- 가중치 $$ W $$의 크기({ l }_{ 1 } norm)를 특정 임계치보다 작게 제한하는 방법이다.
+- 가중치 $$ W $$의 크기( $$ { l }_{ 1 } $$ norm )를 특정 임계치보다 작게 제한하는 방법이다.
 - 알고리즘
-    - 매 훈련 step에서 { \left\| w \right\|  }_{ 2 }를 계산한다.
+    - 매 훈련 step에서 $$ { \left\| w \right\|  }_{ 2 } $$ 를 계산한다.
     - $$ W\leftarrow W\frac { r }{ { \left\| w \right\|  }_{ 2 } } $$으로 가중치를 제한한다.
-
 
 
 ## 참고 자료
 - Hands-on machine learning with Scikit-learn & Tensorflow - 오렐리앙 제롱
-- 가중치 초기화 - https://reniew.github.io/13/
-- 활성 함수 - https://ratsgo.github.io/deep%20learning/2017/04/22/NNtricks/
-- 배치 정규화 - http://sanghyukchun.github.io/88/
-
-
-
-
